@@ -1,0 +1,21 @@
+.Container {
+  width: min(100% - 3rem, 120rem);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .Container {
+    width: min(100% - 12.2rem, 120rem);
+  }
+}
+@media (min-width: 1140px) {
+  .Container {
+    width: min(100% - 16rem, 120rem);
+  }
+}
+
+/* @media (min-width: 1440px) {
+  .Container {
+    width: min(100% - 30rem, 120rem);
+  }
+} */

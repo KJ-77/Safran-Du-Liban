@@ -1,0 +1,48 @@
+# Dependencies
+**/node_modules/
+**/.pnp/
+**/.pnp.js
+**/yarn.lock
+
+/node_modules
+yarn.lock
+
+# Build outputs
+**/dist/
+**/build/
+**/.next/
+**/out/
+
+# Environment variables - never commit these!
+**/.env*
+
+# Logs
+**/*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# IDE and editors
+**/.idea/
+**/.vscode/
+**/*.swp
+**/*.swo
+**/.eslintcache
+
+# OS files
+**/.DS_Store
+**/Thumbs.db
+
+# Testing
+**/coverage/
+
+# Project specific caches
+**/.cache/
+
+# Vite/React specific
+**/.browserslistrc
+
+# Exclude old folder
+/old/
+
+/local
