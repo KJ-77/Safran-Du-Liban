@@ -12,25 +12,25 @@ body {
 
 @font-face {
   font-family: "AdobeDevanagari";
-  src: url("./assests/font/AdobeDevanagari-Regular.otf") format("opentype");
+  src: url("./assets/font/AdobeDevanagari-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "AdobeDevanagari";
-  src: url("./assests/font/AdobeDevanagari-Bold.otf") format("opentype");
+  src: url("./assets/font/AdobeDevanagari-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "AdobeDevanagari";
-  src: url("./assests/font/AdobeDevanagari-Italic.otf") format("opentype");
+  src: url("./assets/font/AdobeDevanagari-Italic.otf") format("opentype");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "AdobeDevanagari";
-  src: url("./assests/font/AdobeDevanagari-BoldItalic.otf") format("opentype");
+  src: url("./assets/font/AdobeDevanagari-BoldItalic.otf") format("opentype");
   font-weight: bold;
   font-style: italic;
 }

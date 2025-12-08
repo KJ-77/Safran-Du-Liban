@@ -1,5 +1,5 @@
 import Container from "Components/Container/Container";
-import bird from "assests/Images/bird.png";
+import bird from "assets/Images/bird.png";
 const Features = ({ data }) => {
   return (
     <section className="bg-background py-12 sm:py-16 md:py-20 lg:py-24">

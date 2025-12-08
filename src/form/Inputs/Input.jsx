@@ -2,8 +2,6 @@ import React from "react";
 
 const Input = (props) => {
   const {
-    boxStyle,
-    inputStyle,
     type,
     name,
     id,

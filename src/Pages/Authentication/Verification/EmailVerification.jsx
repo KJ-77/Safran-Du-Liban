@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { CheckCircle, ArrowLeft, PaperPlaneTilt } from "@phosphor-icons/react";
 import usePost from "Hooks/usePost";
@@ -74,7 +74,7 @@ const EmailVerification = () => {
   };
 
   // Verify OTP
-  const handleVerifyOtp = async () => {
+  const handleVerifyOtp = useCallback(async () => {
     const otpCode = otp.join("");
     if (otpCode.length !== 6) return;
 
@@ -96,7 +96,7 @@ const EmailVerification = () => {
     } catch (error) {
       console.error("Verification failed:", error);
     }
-  };
+  }, [otp, userEmail, verifyOtp, updateVerification, navigate]);
 
   // Resend verification code
   const handleResendCode = async () => {
@@ -132,7 +132,7 @@ const EmailVerification = () => {
     if (otp.every((digit) => digit !== "") && !verifyLoading) {
       handleVerifyOtp();
     }
-  }, [otp]);
+  }, [otp, verifyLoading, handleVerifyOtp]);
 
   // Success state
   if (isSuccess) {

@@ -12,13 +12,11 @@ import {
   Eye,
   EyeSlash,
 } from "@phosphor-icons/react";
-import usePost from "Hooks/usePost";
 import useAuthenticatedPost from "Hooks/useAuthenticatedPost";
 import { useToast } from "Components/Toast/Toast";
 
 const Profile = () => {
-  const { user, isLoggedIn, logout, updateVerification, updateUserProfile } =
-    useAuth();
+  const { user, isLoggedIn, logout } = useAuth();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("profile");
   const [showOldPassword, setShowOldPassword] = useState(false);

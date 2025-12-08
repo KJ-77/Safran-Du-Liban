@@ -1,6 +1,6 @@
 import Container from "Components/Container/Container";
 import React from "react";
-import logo from "../../assests/Images/logo_white.png";
+import logo from "../../assets/Images/logo_white.png";
 import {
   FacebookLogo,
   InstagramLogo,

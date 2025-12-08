@@ -1,6 +1,6 @@
 import Container from "components/Container/Container";
 
-import { ReactComponent as ErrorIcon } from "assests/undraw_fixing_bugs_w7gi.svg";
+import { ReactComponent as ErrorIcon } from "assets/undraw_fixing_bugs_w7gi.svg";
 
 const IsError = ({ iswhite }) => {
   return (

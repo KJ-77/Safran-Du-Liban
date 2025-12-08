@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { useAuth } from "./AuthContext";
 import useAuthenticatedPost from "Hooks/useAuthenticatedPost";
-import useFetch from "Hooks/useFetch";
 import BASE_URL from "Utilities/BASE_URL";
 const CartContext = createContext();
 
@@ -11,7 +10,6 @@ export const CartProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const { user, isLoggedIn } = useAuth();
   const { postData } = useAuthenticatedPost();
-  const { fetchData } = useFetch();
 
   // Load cart when user logs in
   useEffect(() => {

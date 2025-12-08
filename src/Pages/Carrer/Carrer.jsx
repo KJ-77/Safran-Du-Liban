@@ -27,11 +27,11 @@ const Carrer = () => {
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [fetchData]);
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [getData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Container from "Components/Container/Container";
 import { List, ShoppingCart, X } from "@phosphor-icons/react";
-import logo from "assests/Images/safran-logo.jpg";
+import logo from "assets/Images/safran-logo.jpg";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import Navigation from "./Components/Navigation";
 import AuthButton from "./Components/AuthButton";

@@ -6,15 +6,11 @@ import {
   Truck,
   Clock,
   House,
-  ArrowRight,
-  EnvelopeSimple,
 } from "@phosphor-icons/react";
 import Container from "Components/Container/Container";
 import { useAuth } from "context/AuthContext";
 import { useCart } from "context/CartContext";
 import useFetch from "Hooks/useFetch";
-import useAuthenticatedPost from "Hooks/useAuthenticatedPost";
-import { useToast } from "Components/Toast/Toast";
 
 const CheckoutSuccess = () => {
   const { orderNumber } = useParams();
@@ -22,11 +18,7 @@ const CheckoutSuccess = () => {
   const { isLoggedIn } = useAuth();
   const { setCart } = useCart();
   const { fetchData } = useFetch();
-  const { postData } = useAuthenticatedPost();
-  const { showToast, ToastComponent } = useToast();
-  const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [resendingEmail, setResendingEmail] = useState(false);
 
   useEffect(() => {
     if (!isLoggedIn) {
@@ -56,41 +48,6 @@ const CheckoutSuccess = () => {
       setLoading(false);
     }
   }, [orderNumber, isLoggedIn, navigate, fetchData, setCart]);
-
-  const resendConfirmationEmail = async () => {
-    if (!orderNumber) {
-      showToast("Order number is required to resend email", "error");
-      return;
-    }
-
-    try {
-      setResendingEmail(true);
-      const response = await postData(
-        `/orders/resend-confirmation/${orderNumber}`
-      );
-
-      if (response.success) {
-        showToast("Confirmation email has been resent", "success");
-      } else {
-        showToast(
-          response.message || "Failed to resend confirmation email",
-          "error"
-        );
-      }
-    } catch (error) {
-      console.error("Error resending confirmation email:", error);
-      showToast("Failed to resend confirmation email", "error");
-    } finally {
-      setResendingEmail(false);
-    }
-  };
-
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-    }).format(price);
-  };
 
   if (loading) {
     return (
@@ -233,7 +190,6 @@ const CheckoutSuccess = () => {
           </div>
         </div>
       </Container>
-      <ToastComponent />
     </div>
   );
 };

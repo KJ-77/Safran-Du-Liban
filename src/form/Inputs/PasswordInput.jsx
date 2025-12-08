@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Eye, EyeClosed } from "@phosphor-icons/react";
 
 const PasswordInput = (props) => {
@@ -15,7 +14,6 @@ const PasswordInput = (props) => {
     onChange = () => {},
     onBlur = () => {},
     onFocus = () => {},
-    isFocus,
     hasError = false,
     errorMessage = "error",
   } = props;

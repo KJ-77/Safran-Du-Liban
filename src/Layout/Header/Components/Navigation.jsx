@@ -1,15 +1,7 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navigation = ({ isMobile, onNavClick }) => {
-  const location = useLocation();
-
-  const isActive = (path) => {
-    if (path === "/" && location.pathname === "/") return true;
-    if (path !== "/" && location.pathname.startsWith(path)) return true;
-    return false;
-  };
-
   const handleNavClick = () => {
     if (isMobile && onNavClick) {
       onNavClick();

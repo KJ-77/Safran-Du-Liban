@@ -1,26 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Container from "Components/Container/Container";
-import { IMAGE_URL } from "Utilities/BASE_URL";
-import smallLogo from "assests/Images/smal-logo.png";
+import Logo from "assets/Images/safran-logo-1.png";
+import bannerImage from "assets/Images/banner101-1.png";
 
-const Hero = ({ data }) => {
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const heroSection = document.getElementById("hero-section");
-      if (heroSection) {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        setIsSticky(heroBottom <= 10);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+const Hero = () => {
   return (
     <div
       id="hero-section"
@@ -30,8 +13,8 @@ const Hero = ({ data }) => {
         {/* <img className="object-s w-full h-full" src={heroImage} alt="" /> */}
         <img
           className="object-s w-full h-full"
-          src={`${IMAGE_URL}/${data?.banner}`}
-          alt=""
+          src={bannerImage}
+          alt="Banner"
         />
       </div>
 
@@ -39,20 +22,15 @@ const Hero = ({ data }) => {
         <div>
           <div className="flex flex-col mt-40 xsm:mt-48 lg:mt-72 justify-center items-center">
             <div className="mr-10 lg:hidden">
-              <img
-                src={smallLogo}
-                alt="Logo"
-                className="w-[8rem] xsm:w-[10rem] md:w-[20rem] mx-auto object-contain"
-              />
             </div>
             <img
-              src={`${IMAGE_URL}/${data?.logo}`}
+              src={Logo}
               alt="Logo"
               className="hidden lg:block lg:w-[18rem] xxl:w-[26rem] mx-auto object-contain"
             />
 
             <p className="text-whiste  italic mt-20 lg:mt-16 xxl:mt-20 text-center text-3xl font-bold">
-              {data?.slogan}
+              From the land of cedars
             </p>
           </div>
         </div>

@@ -16,7 +16,7 @@ const Regitser = () => {
   const confirmPassword = useInput(
     (val) => val === password.value && val.length >= 8
   );
-  const { data, loading, error, postData } = usePost();
+  const { loading, error, postData } = usePost();
   const [submitted, setSubmitted] = useState(false);
   const [showVerificationModal, setShowVerificationModal] = useState(false);
   const [registeredEmail, setRegisteredEmail] = useState("");

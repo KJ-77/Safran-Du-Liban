@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import BASE_URL from "Utilities/BASE_URL";
 const useFetch = () => {
   const [data, setData] = useState(null);

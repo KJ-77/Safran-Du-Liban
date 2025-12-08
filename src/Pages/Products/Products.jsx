@@ -43,7 +43,7 @@ const Products = () => {
       setIsLoading(false);
     };
     loadData();
-  }, []);
+  }, [fetchData]);
 
   // Filter products by active category
   const filteredProducts = activeCategory
