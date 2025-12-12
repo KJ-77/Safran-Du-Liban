@@ -35,7 +35,7 @@ const Home = () => {
     features: {
       about_us: [
         {
-          title: "A Table! test",
+          title: "A Table!",
           text: "<p>Lebanon’s first saffron project accomplished the unthinkable: attain the finest quality in terms of color and flavor while having a social responsible impact on local communities. <br />This organic and healthy product can be found at several michelin star restaurants</p>",
         },
         {
